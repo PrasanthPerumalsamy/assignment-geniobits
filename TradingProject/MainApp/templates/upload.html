@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block csv %}
+    <h3>Upload CSV file and Timeframe</h3>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="margin-bottom: 10px;">
+        <input type="file" name="csv_file" />
+    </div>
+    <div style="margin-bottom: 10px;">
+        <p>Please enter the timeframe</p>
+        <input type="number" name="timeframe" id="">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+{% endblock %}
